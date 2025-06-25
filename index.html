@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav class="navbar">
+  <div class="container">
+    <h2 class="logo">MyPortfolio</h2>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#research">Research Paper</a></li>
+      <li><a href="#achievements">Achievements</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="darkToggle" aria-label="Toggle Dark Mode">🌗</button>
+  </div>
+</nav>
+
+  <header id="home">
+    <div class="container">
+      <h1>Hi, I'm Neha Goswami</h1>
+    
+      <h3><span class="typing"></span></h3>
+      
+    </div>
+  </header>
+
+  <script>
+  const typedText = document.querySelector(".typing");
+  const phrases = ["Web Developer", "AI Enthusiast", "Open Source Contributor", "Tech Explorer"];
+  let index = 0;
+  let charIndex = 0;
+
+  function type() {
+    if (charIndex < phrases[index].length) {
+      typedText.textContent += phrases[index].charAt(charIndex);
+      charIndex++;
+      setTimeout(type, 100);
+    } else {
+      setTimeout(erase, 2000);
+    }
+  }
+
+  function erase() {
+    if (charIndex > 0) {
+      typedText.textContent = phrases[index].substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(erase, 60);
+    } else {
+      index = (index + 1) % phrases.length;
+      setTimeout(type, 300);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    type();
+  });
+</script>
+
+<section class="parallax-section">
+  <div class="parallax-content">
+    <h2>I Build Smart, Elegant Solutions 👨‍💻</h2>
+<p>Full Stack Developer | AI & ML Enthusiast | Always Learning 🚀</p>
+  </div>
+</section>
+  <!-- ✅ About Me Section -->
+<section id="about" class="about-section">
+  <div class="about-container">
+    <div class="about-img">
+      <img src="neha.jpeg.jpeg" alt="Neha Goswami" />
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>
+        I’m <strong>Neha Goswami</strong>, a final-year BSc (Hons) Computer Science student at <strong>Shaheed Rajguru College of Applied Sciences for Women, University of Delhi</strong>. I specialize in <strong>AI, Deep Learning, and Web Development</strong> with a passion for building impactful, tech-driven solutions.
+      </p>
+      <p>
+        With a strong foundation in programming and problem-solving, I’ve led and contributed to multiple academic and collaborative projects. My experience spans from hosting college tech events to working on real-world research initiatives.
+      </p>
+      <p>
+        I’m a curious learner, always exploring how technology can solve real problems — and I aim to grow into a tech leader who not only delivers innovation but also empowers others through knowledge sharing and mentorship.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- ===== Skills Section ===== -->
+<section id="skills" class="skills-section">
+  <h2>My Tech Stack</h2>
+  <div class="skills-icons">
+    <div class="skill-item">Python</div>
+    <div class="skill-item">C++</div>
+    <div class="skill-item">SQL</div>
+    <div class="skill-item">HTML</div>
+    <div class="skill-item">CSS</div>
+    <div class="skill-item">JavaScript</div>
+    <div class="skill-item">React.js</div>
+    <div class="skill-item">AI</div>
+    <div class="skill-item">Machine Learning</div>
+    <div class="skill-item">Git & GitHub</div>
+    <div class="skill-item">Data Structures</div>
+    <div class="skill-item">Problem Solving</div>
+  </div>
+</section>
+
+
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2>My Projects</h2>
+
+    <div class="project-list">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website built with HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Weather App</h3>
+        <p>A weather app that shows real-time weather using an API.</p>
+      </div>
+      <a href="https://neha1411-2004.github.io/TO-DO-lIST/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
+        <h3>To-Do List</h3>
+        <p>A simple and clean to-do list application made using JavaScript.</p>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+<section id="research" class="research-section">
+  <h2>Research Paper</h2>
+  <div class="research-container">
+    <h3>Assessing Vulnerabilities in Voice Assistants: Comparative Analysis of Google Assistant, Siri, and Alexa</h3>
+    <p>This paper analyzes security vulnerabilities found in popular voice assistants and compares their impacts and mitigation techniques. It highlights key challenges and proposes future research directions.</p>
+    <a href="https://cybersecurityjournal.info/uploads/archivepdf/280621110.pdf" target="_blank" class="btn-download">Download Paper</a>
+  </div>
+ 
+  <section id="achievements" class="aerobics-section">
+  <div class="intro">
+   <h2>My Journey in Aerobics & Sports</h2>
+
+
+    <p>
+      Sports have always been a significant part of my life, but aerobics holds a special place in my heart.
+      It is an expression of energy, rhythm, and discipline. Aerobics has taught me the value of consistency,
+      coordination, and confidence. These achievements are more than just medals; they are milestones of dedication and passion.
+    </p>
+  </div>
+
+  <div class="aerobics-entry">
+    <img src="id.jpg" alt="Interdepartmental Competition">
+    <div class="entry-text">
+      <h3>Interdepartmental Competition</h3>
+      <p><strong>Position:</strong> 1st | <strong>Date:</strong> october 2023</p>
+      <p>Secured the first position in the Interdepartmental Aerobics Competition organized within our college for the session 2023–2024.</p>
+    </div>
+  </div>
+
+  <div class="aerobics-entry">
+    <img src="miranda.jpeg.jpg" alt="EROBERN '25">
+    <div class="entry-text">
+      <h3>EROBERN '25</h3>
+      <p><strong>Position:</strong> 1st | <strong>Date:</strong> 13 February 2025</p>
+      <p>Achieved first place at EROBERN '25, the intercollege aerobics competition held at Miranda House, University of Delhi.</p>
+    </div>
+  </div>
+
+  <div class="aerobics-entry">
+    <img src="rajguru.jpeg.jpg" alt="Spardhaa">
+    <div class="entry-text">
+      <h3>Spardhaa</h3>
+      <p><strong>Position:</strong> 1st | <strong>Date:</strong> 14 February 2025</p>
+      <p>Won first position in the intercollege aerobics competition organized as part of Spardhaa, the annual sports fest of Shaheed Rajguru College.</p>
+    </div>
+  </div>
+
+  <div class="aerobics-entry">
+    <img src="lehren.jpg" alt="Leheren">
+    <div class="entry-text">
+      <h3>Leheren</h3>
+      <p><strong>Position:</strong> 1st | <strong>Date:</strong> 3 April 2025</p>
+      <p>Secured first place in the intercollege aerobics competition at Leheren, the annual cultural and sports fest of Kalindi College.</p>
+    </div>
+  </div>
+</section>
+<section>
+  <h2 class="tech-section-heading">My Achievements in Tech Events</h2>
+  <p class="tech-section-description">
+    Alongside my passion for development and research, I’ve always enjoyed participating in various tech events and quizzes.
+      These platforms challenge my logical thinking, keep me updated with the latest trends, and provide opportunities to collaborate and learn from peers in the tech community.
+  </p>
+
+  <div class="event-card">
+  <div class="event-image">
+    <img src="tech.jpg" alt="WHIQ Quiz Certificate">
+  </div>
+  <div class="event-content">
+    <h3>WHIQ QUIZ - Tech Fest</h3>
+    <p><strong>Position:</strong> 3rd | <strong>Date:</strong> 23 October 2024</p>
+    <p>
+      Secured 3rd position in the WHIQ QUIZ competition held during the Tech Fest organized by the Computer Science Department at Shaheed Rajguru College.
+    </p>
+  </div>
+</div>
+
+
+
+
+
+
+</section>
+<section id="contact" class="contact-section">
+  <h2>Contact Me</h2>
+  <p class="cta">Let’s work together or just have a chat! 🚀</p>
+
+  <form class="contact-form" action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Name" required />
+    <input type="email" name="email" placeholder="Gmail ID" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="social-links">
+    <a href="https://github.com/your-username" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" />
+    </a>
+    <a href="https://www.linkedin.com/in/neha-goswami-a19359289/" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" />
+    </a>
+    <a href="https://www.instagram.com/nehaagoswamii_14?igsh=MWZrNTl3MTBmanNmZA==" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+    </a>
+    <a href="tel:+917840029777">
+      <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone" />
+    </a>
+  </div>
+</section>
+
+
+
+
+  <!-- More sections will come here -->
+
+  <script src="script.js"></script>
+</body>
+</html>
